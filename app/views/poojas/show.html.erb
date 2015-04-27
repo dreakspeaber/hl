@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pooja.name %>
+</p>
+
+<p>
+  <strong>Idol:</strong>
+  <%= @pooja.idol %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pooja.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pooja.price %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @pooja.availability %>
+</p>
+
+<%= link_to 'Edit', edit_pooja_path(@pooja) %> |
+<%= link_to 'Back', poojas_path %>

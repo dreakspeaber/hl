@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Poojas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Idol</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Availability</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poojas.each do |pooja| %>
+      <tr>
+        <td><%= pooja.name %></td>
+        <td><%= pooja.idol %></td>
+        <td><%= pooja.description %></td>
+        <td><%= pooja.price %></td>
+        <td><%= pooja.availability %></td>
+        <td><%= link_to 'Show', pooja %></td>
+        <td><%= link_to 'Edit', edit_pooja_path(pooja) %></td>
+        <td><%= link_to 'Destroy', pooja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pooja', new_pooja_path %>
